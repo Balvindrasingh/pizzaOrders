@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pizza Order Form</title>
+  <meta name="author" content="Balvindra">
+  <meta name="description" content="A concise and accurate summary of the document content is to appear here">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <h1>PIZZA ORDER</h1>
+  </header>
+  <img src="ivan-torres-MQUqbmszGGM-unsplash.jpg" width="873" height="300">
+  <main>
+    <form action="confirmation.php" method="post">
+      <fieldset>
+        <legend>Contact Information</legend>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Pizza Details</legend>
+        <div>
+          <label for="num-pizzas">Number of Pizzas:</label>
+          <input type="number" id="num-pizzas" name="num-pizzas" min="1" max="10" required>
+        </div>
+        <div>
+          <label for="pizza-size">Size:</label>
+          <select id="pizza-size" name="pizza-size" required>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+        </div>
+        <div>
+          <label for="pizza-shape">Shape:</label>
+          <input type="radio" id="round" name="pizza-shape" value="round" checked>
+          <label for="round">Round</label>
+          <input type="radio" id="square" name="pizza-shape" value="square">
+          <label for="square">Square</label>
+        </div>
+        <fieldset>
+          <legend>Toppings</legend>
+          <label>Toppings:</label>
+          <input type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
+          <label for="pepperoni">Pepperoni</label>
+          <input type="checkbox" id="mushrooms" name="toppings" value="mushrooms">
+          <label for "mushrooms">Mushrooms</label>
+          <input type="checkbox" id="olives" name="toppings" value="olives">
+          <label for="olives">Olives</label>
+        </fieldset>
+        <div>
+          <label for="crust">Crust Type:</label>
+          <select id="crust" name="crust" required>
+            <option value="deep-dish">Deep Dish</option>
+            <option value="thin-crust">Thin Crust</option>
+            <option value="regular">Regular</option>
+          </select>
+        </div>
+        <div>
+          <label for="order-type">Order Type:</label>
+          <input type="radio" id="take-out" name="order-type" value="take-out" checked>
+          <label for="take-out">Take Out</label>
+          <input type="radio" id="delivery" name="order-type" value="delivery">
+          <label for="delivery">Delivery</label>
+          <input type="radio" id="eat-in" name="order-type" value="eat-in">
+          <label for="eat-in">Eat In</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Additional Comments</legend>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+      </fieldset>
+      <input type="submit" value="Place Order">
+      <input type="reset" value="Reset">
+    </form>
+    <p>Click the link below to go to the confirmation page:</p>
+    <a href="confirmation.php">Go to Confirmation Page</a>
+  </main>
+  <footer>
+    <p>&copy; 2023 Pizza Company. All rights reserved.</p>
+  </footer>
+</body>
+</html>
